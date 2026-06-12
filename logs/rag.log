@@ -1,0 +1,7 @@
+2026-06-12 17:03:28 | INFO | main | RAG system starting up...
+2026-06-12 17:03:28 | INFO | main | Embedding model: all-MiniLM-L6-v2
+2026-06-12 17:03:28 | INFO | main | LLM model: llama-3.3-70b-versatile
+2026-06-12 17:03:28 | INFO | main | Chunk size: 500
+2026-06-12 17:03:28 | INFO | main | Top K results: 3
+2026-06-12 17:03:28 | INFO | main | Documents path: ./data/documents
+2026-06-12 17:03:28 | INFO | main | Configuration loaded successfully!

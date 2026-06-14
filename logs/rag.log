@@ -70,3 +70,29 @@
 2026-06-14 19:56:58 | INFO | document_loader | Loaded 'unit-1-notes-ai.pdf' — 32 pages
 2026-06-14 19:56:58 | INFO | document_loader | Total loaded: 223 pages from 2 documents
 2026-06-14 19:56:58 | INFO | document_loader | Document stats: {'total_pages': 223, 'total_documents': 2, 'documents': {'syllabus.pdf': 191, 'unit-1-notes-ai.pdf': 32}}
+2026-06-14 20:04:40 | INFO | main | ==================================================
+2026-06-14 20:04:40 | INFO | main | Setting up RAG pipeline...
+2026-06-14 20:04:40 | INFO | main | ==================================================
+2026-06-14 20:04:40 | INFO | document_loader | Found 2 PDF(s) in ./data/documents
+2026-06-14 20:04:40 | INFO | validator | Document validated: ./data/documents\syllabus.pdf (3742.9 KB)
+2026-06-14 20:04:53 | INFO | document_loader | Loaded 'syllabus.pdf' — 191 pages
+2026-06-14 20:04:53 | INFO | validator | Document validated: ./data/documents\unit-1-notes-ai.pdf (4138.8 KB)
+2026-06-14 20:04:54 | INFO | document_loader | Loaded 'unit-1-notes-ai.pdf' — 32 pages
+2026-06-14 20:04:54 | INFO | document_loader | Total loaded: 223 pages from 2 documents
+2026-06-14 20:04:54 | INFO | document_loader | Document stats: {'total_pages': 223, 'total_documents': 2, 'documents': {'syllabus.pdf': 191, 'unit-1-notes-ai.pdf': 32}}
+2026-06-14 20:04:54 | INFO | main | Loaded 2 documents, 223 pages
+2026-06-14 20:04:54 | INFO | chunker | Created 801 chunks from 223 pages
+2026-06-14 20:04:54 | INFO | embedder | Embedding model loaded: all-MiniLM-L6-v2
+2026-06-14 20:05:08 | INFO | embedder | Generated 801 embeddings of dimension 384
+2026-06-14 20:05:08 | INFO | vector_store | Connected to ChromaDB: 700 chunks stored
+2026-06-14 20:05:09 | INFO | vector_store | Cleared 700 existing chunks
+2026-06-14 20:05:10 | INFO | vector_store | Stored 801 chunks in ChromaDB
+2026-06-14 20:05:10 | INFO | main | Pipeline setup complete!
+2026-06-14 20:05:10 | INFO | validator | Question validated: 'What are the types of disasters mentioned?'
+2026-06-14 20:05:10 | INFO | vector_store | Retrieved 3 chunks for query: 'What are the types of disasters mentioned?'
+2026-06-14 20:05:10 | INFO | generator | LLM client ready: llama-3.3-70b-versatile
+2026-06-14 20:05:12 | INFO | generator | Answer generated successfully
+2026-06-14 20:05:12 | INFO | validator | Question validated: 'What are the LTPC credits for MX3084?'
+2026-06-14 20:05:12 | INFO | vector_store | Retrieved 3 chunks for query: 'What are the LTPC credits for MX3084?'
+2026-06-14 20:05:12 | INFO | generator | LLM client ready: llama-3.3-70b-versatile
+2026-06-14 20:05:19 | INFO | generator | Answer generated successfully

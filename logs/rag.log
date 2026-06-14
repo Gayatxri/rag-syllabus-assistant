@@ -96,3 +96,22 @@
 2026-06-14 20:05:12 | INFO | vector_store | Retrieved 3 chunks for query: 'What are the LTPC credits for MX3084?'
 2026-06-14 20:05:12 | INFO | generator | LLM client ready: llama-3.3-70b-versatile
 2026-06-14 20:05:19 | INFO | generator | Answer generated successfully
+2026-06-14 20:11:33 | INFO | main | ==================================================
+2026-06-14 20:11:33 | INFO | main | Day 11 — Query Rewriting Tests
+2026-06-14 20:11:33 | INFO | main | ==================================================
+2026-06-14 20:11:33 | INFO | query_rewriter | Query needs rewriting: 'tell me unit 1'
+2026-06-14 20:11:35 | INFO | query_rewriter | Original: 'tell me unit 1'
+2026-06-14 20:11:35 | INFO | query_rewriter | Rewritten: '"Unit 1 course outline" or "Unit 1 syllabus summary"'
+2026-06-14 20:11:35 | INFO | query_rewriter | Query needs rewriting: 'exam?'
+2026-06-14 20:11:36 | INFO | query_rewriter | Original: 'exam?'
+2026-06-14 20:11:36 | INFO | query_rewriter | Rewritten: '"assessment schedule" OR "exam dates" OR "evaluation procedures" OR "final exam information"'
+2026-06-14 20:11:36 | INFO | query_rewriter | Query needs rewriting: 'disasters'
+2026-06-14 20:11:37 | INFO | query_rewriter | Original: 'disasters'
+2026-06-14 20:11:37 | INFO | query_rewriter | Rewritten: '"natural disasters OR man-made disasters OR emergency response plans OR crisis management policies IN university procedures"'
+2026-06-14 20:11:37 | INFO | query_rewriter | Query is good, no rewrite needed
+2026-06-14 20:11:37 | INFO | query_rewriter | Query needs rewriting: 'credits'
+2026-06-14 20:11:37 | INFO | query_rewriter | Original: 'credits'
+2026-06-14 20:11:37 | INFO | query_rewriter | Rewritten: '"total credits required for degree completion"'
+2026-06-14 20:11:37 | INFO | query_rewriter | Query needs rewriting: 'types of hazards in the syllabus'
+2026-06-14 20:11:38 | INFO | query_rewriter | Original: 'types of hazards in the syllabus'
+2026-06-14 20:11:38 | INFO | query_rewriter | Rewritten: '"List of potential hazards and risks identified in the university syllabus document"'

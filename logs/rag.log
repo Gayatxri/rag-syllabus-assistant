@@ -5,3 +5,48 @@
 2026-06-12 17:03:28 | INFO | main | Top K results: 3
 2026-06-12 17:03:28 | INFO | main | Documents path: ./data/documents
 2026-06-12 17:03:28 | INFO | main | Configuration loaded successfully!
+2026-06-12 17:24:44 | INFO | main | RAG system starting up...
+2026-06-12 17:24:44 | INFO | main | Embedding model: all-MiniLM-L6-v2
+2026-06-12 17:24:44 | INFO | main | LLM model: llama-3.3-70b-versatile
+2026-06-12 17:24:44 | INFO | main | Chunk size: 500
+2026-06-12 17:24:44 | INFO | main | Top K results: 3
+2026-06-12 17:24:44 | INFO | main | Documents path: ./data/documents
+2026-06-12 17:24:44 | INFO | main | Configuration loaded successfully!
+2026-06-14 12:42:15 | INFO | main | RAG system starting up...
+2026-06-14 12:42:15 | INFO | main | Embedding model: all-MiniLM-L6-v2
+2026-06-14 12:42:15 | INFO | main | LLM model: llama-3.3-70b-versatile
+2026-06-14 12:42:15 | INFO | main | Chunk size: 500
+2026-06-14 12:42:15 | INFO | main | Top K results: 3
+2026-06-14 12:42:15 | INFO | main | Documents path: ./data/documents
+2026-06-14 12:42:15 | INFO | main | Configuration loaded successfully!
+2026-06-14 12:44:09 | INFO | main | ==================================================
+2026-06-14 12:44:09 | INFO | main | Day 8 — Error Handling Tests
+2026-06-14 12:44:09 | INFO | main | ==================================================
+2026-06-14 12:44:09 | INFO | main | Testing input validation...
+2026-06-14 12:44:09 | WARNING | main | CAUGHT — empty question: Question cannot be empty
+2026-06-14 12:44:09 | WARNING | main | CAUGHT — too short: Question too short: 'Hi'. Please ask a proper question.
+2026-06-14 12:44:09 | INFO | validator | Question validated: 'What are the types of disasters?'
+2026-06-14 12:44:09 | INFO | main | PASSED — valid question: 'What are the types of disaster'
+2026-06-14 12:44:09 | WARNING | main | CAUGHT — too long: Question too long (600 chars). Please keep it under 500 characters.
+2026-06-14 12:44:09 | INFO | main | Testing document validation...
+2026-06-14 12:44:09 | WARNING | main | CAUGHT — Document not found: C:\Users\HP\my_rag_project\data\documents\syllabus.pdf
+2026-06-14 12:44:09 | WARNING | main | CAUGHT — Document not found: data/fake_document.pdf
+2026-06-14 12:44:09 | WARNING | main | CAUGHT — Document not found: data/documents/wrong.docx
+2026-06-14 12:44:09 | INFO | main | ==================================================
+2026-06-14 12:44:09 | INFO | main | All error handling tests complete!
+2026-06-14 12:45:21 | INFO | main | ==================================================
+2026-06-14 12:45:21 | INFO | main | Day 8 — Error Handling Tests
+2026-06-14 12:45:21 | INFO | main | ==================================================
+2026-06-14 12:45:21 | INFO | main | Testing input validation...
+2026-06-14 12:45:21 | WARNING | main | CAUGHT — empty question: Question cannot be empty
+2026-06-14 12:45:21 | WARNING | main | CAUGHT — too short: Question too short: 'Hi'. Please ask a proper question.
+2026-06-14 12:45:21 | INFO | validator | Question validated: 'What are the types of disasters?'
+2026-06-14 12:45:21 | INFO | main | PASSED — valid question: 'What are the types of disaster'
+2026-06-14 12:45:21 | WARNING | main | CAUGHT — too long: Question too long (600 chars). Please keep it under 500 characters.
+2026-06-14 12:45:21 | INFO | main | Testing document validation...
+2026-06-14 12:45:21 | INFO | validator | Document validated: C:\Users\HP\my_rag_project\data\documents\syllabus.pdf (3742.9 KB)
+2026-06-14 12:45:21 | INFO | main | PASSED — Document valid: C:\Users\HP\my_rag_project\data\documents\syllabus.pdf
+2026-06-14 12:45:21 | WARNING | main | CAUGHT — Document not found: data/fake_document.pdf
+2026-06-14 12:45:21 | WARNING | main | CAUGHT — Document not found: data/documents/wrong.docx
+2026-06-14 12:45:21 | INFO | main | ==================================================
+2026-06-14 12:45:21 | INFO | main | All error handling tests complete!

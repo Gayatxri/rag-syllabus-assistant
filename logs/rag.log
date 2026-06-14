@@ -50,3 +50,23 @@
 2026-06-14 12:45:21 | WARNING | main | CAUGHT — Document not found: data/documents/wrong.docx
 2026-06-14 12:45:21 | INFO | main | ==================================================
 2026-06-14 12:45:21 | INFO | main | All error handling tests complete!
+2026-06-14 12:53:29 | INFO | main | ==================================================
+2026-06-14 12:53:29 | INFO | main | Day 9 — Multiple Document Support
+2026-06-14 12:53:29 | INFO | main | ==================================================
+2026-06-14 12:53:29 | INFO | main | Loading all documents...
+2026-06-14 12:53:29 | INFO | document_loader | Found 1 PDF(s) in ./data/documents
+2026-06-14 12:53:29 | INFO | validator | Document validated: ./data/documents\syllabus.pdf (3742.9 KB)
+2026-06-14 12:53:44 | INFO | document_loader | Loaded 'syllabus.pdf' — 191 pages
+2026-06-14 12:53:44 | INFO | document_loader | Total loaded: 191 pages from 1 documents
+2026-06-14 12:53:44 | INFO | document_loader | Document stats: {'total_pages': 191, 'total_documents': 1, 'documents': {'syllabus.pdf': 191}}
+2026-06-14 19:56:43 | INFO | main | ==================================================
+2026-06-14 19:56:43 | INFO | main | Day 9 — Multiple Document Support
+2026-06-14 19:56:43 | INFO | main | ==================================================
+2026-06-14 19:56:43 | INFO | main | Loading all documents...
+2026-06-14 19:56:43 | INFO | document_loader | Found 2 PDF(s) in ./data/documents
+2026-06-14 19:56:43 | INFO | validator | Document validated: ./data/documents\syllabus.pdf (3742.9 KB)
+2026-06-14 19:56:57 | INFO | document_loader | Loaded 'syllabus.pdf' — 191 pages
+2026-06-14 19:56:57 | INFO | validator | Document validated: ./data/documents\unit-1-notes-ai.pdf (4138.8 KB)
+2026-06-14 19:56:58 | INFO | document_loader | Loaded 'unit-1-notes-ai.pdf' — 32 pages
+2026-06-14 19:56:58 | INFO | document_loader | Total loaded: 223 pages from 2 documents
+2026-06-14 19:56:58 | INFO | document_loader | Document stats: {'total_pages': 223, 'total_documents': 2, 'documents': {'syllabus.pdf': 191, 'unit-1-notes-ai.pdf': 32}}

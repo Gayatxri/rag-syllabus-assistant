@@ -115,3 +115,74 @@
 2026-06-14 20:11:37 | INFO | query_rewriter | Query needs rewriting: 'types of hazards in the syllabus'
 2026-06-14 20:11:38 | INFO | query_rewriter | Original: 'types of hazards in the syllabus'
 2026-06-14 20:11:38 | INFO | query_rewriter | Rewritten: '"List of potential hazards and risks identified in the university syllabus document"'
+2026-06-14 20:19:01 | INFO | main | ==================================================
+2026-06-14 20:19:01 | INFO | main | Day 12 — Hybrid Search Test
+2026-06-14 20:19:01 | INFO | main | ==================================================
+2026-06-14 20:19:01 | INFO | document_loader | Found 2 PDF(s) in ./data/documents
+2026-06-14 20:19:01 | INFO | validator | Document validated: ./data/documents\syllabus.pdf (3742.9 KB)
+2026-06-14 20:19:13 | INFO | document_loader | Loaded 'syllabus.pdf' — 191 pages
+2026-06-14 20:19:13 | INFO | validator | Document validated: ./data/documents\unit-1-notes-ai.pdf (4138.8 KB)
+2026-06-14 20:19:14 | INFO | document_loader | Loaded 'unit-1-notes-ai.pdf' — 32 pages
+2026-06-14 20:19:14 | INFO | document_loader | Total loaded: 223 pages from 2 documents
+2026-06-14 20:19:14 | INFO | chunker | Created 801 chunks from 223 pages
+2026-06-14 20:19:15 | INFO | embedder | Embedding model loaded: all-MiniLM-L6-v2
+2026-06-14 20:19:28 | INFO | embedder | Generated 801 embeddings of dimension 384
+2026-06-14 20:19:28 | INFO | vector_store | Connected to ChromaDB: 801 chunks stored
+2026-06-14 20:19:28 | INFO | vector_store | Cleared 801 existing chunks
+2026-06-14 20:19:29 | INFO | vector_store | Stored 801 chunks in ChromaDB
+2026-06-14 20:19:29 | INFO | hybrid_search | Hybrid searcher initialized with 801 chunks
+2026-06-14 20:19:29 | INFO | query_rewriter | Query needs rewriting: 'MX3084 LTPC credits'
+2026-06-14 20:19:31 | WARNING | query_rewriter | Query rewriting failed, using original: Connection error.
+2026-06-14 20:19:31 | INFO | vector_store | Retrieved 3 chunks for query: 'MX3084 LTPC credits'
+2026-06-14 20:19:31 | INFO | hybrid_search | Semantic search returned 3 chunks
+2026-06-14 20:19:31 | INFO | hybrid_search | Keyword search returned 2 chunks
+2026-06-14 20:19:31 | INFO | hybrid_search | Hybrid search returned 3 chunks
+2026-06-14 20:19:31 | INFO | query_rewriter | Query needs rewriting: 'Sendai Framework disaster risk reduction'
+2026-06-14 20:19:33 | WARNING | query_rewriter | Query rewriting failed, using original: Connection error.
+2026-06-14 20:19:33 | INFO | vector_store | Retrieved 3 chunks for query: 'Sendai Framework disaster risk reduction'
+2026-06-14 20:19:33 | INFO | hybrid_search | Semantic search returned 3 chunks
+2026-06-14 20:19:33 | INFO | hybrid_search | Keyword search returned 3 chunks
+2026-06-14 20:19:33 | INFO | hybrid_search | Hybrid search returned 3 chunks
+2026-06-14 20:19:33 | INFO | query_rewriter | Query needs rewriting: 'types of natural disasters'
+2026-06-14 20:19:35 | WARNING | query_rewriter | Query rewriting failed, using original: Connection error.
+2026-06-14 20:19:35 | INFO | vector_store | Retrieved 3 chunks for query: 'types of natural disasters'
+2026-06-14 20:19:35 | INFO | hybrid_search | Semantic search returned 3 chunks
+2026-06-14 20:19:35 | INFO | hybrid_search | Keyword search returned 3 chunks
+2026-06-14 20:19:35 | INFO | hybrid_search | Hybrid search returned 3 chunks
+2026-06-16 12:58:03 | INFO | main | ==================================================
+2026-06-16 12:58:03 | INFO | main | Day 12 — Hybrid Search Test
+2026-06-16 12:58:03 | INFO | main | ==================================================
+2026-06-16 12:58:03 | INFO | document_loader | Found 2 PDF(s) in ./data/documents
+2026-06-16 12:58:03 | INFO | validator | Document validated: ./data/documents\syllabus.pdf (3742.9 KB)
+2026-06-16 12:58:16 | INFO | document_loader | Loaded 'syllabus.pdf' — 191 pages
+2026-06-16 12:58:16 | INFO | validator | Document validated: ./data/documents\unit-1-notes-ai.pdf (4138.8 KB)
+2026-06-16 12:58:18 | INFO | document_loader | Loaded 'unit-1-notes-ai.pdf' — 32 pages
+2026-06-16 12:58:18 | INFO | document_loader | Total loaded: 223 pages from 2 documents
+2026-06-16 12:58:18 | INFO | chunker | Created 801 chunks from 223 pages
+2026-06-16 12:58:18 | INFO | embedder | Embedding model loaded: all-MiniLM-L6-v2
+2026-06-16 12:58:34 | INFO | embedder | Generated 801 embeddings of dimension 384
+2026-06-16 12:58:35 | INFO | vector_store | Connected to ChromaDB: 801 chunks stored
+2026-06-16 12:58:35 | INFO | vector_store | Cleared 801 existing chunks
+2026-06-16 12:58:36 | INFO | vector_store | Stored 801 chunks in ChromaDB
+2026-06-16 12:58:36 | INFO | hybrid_search | Hybrid searcher initialized with 801 chunks
+2026-06-16 12:58:36 | INFO | query_rewriter | Query needs rewriting: 'MX3084 LTPC credits'
+2026-06-16 12:58:37 | INFO | query_rewriter | Original: 'MX3084 LTPC credits'
+2026-06-16 12:58:37 | INFO | query_rewriter | Rewritten: '"MX3084 LTPC credits breakdown" or "MX3084 Learning and Teaching Programme Committee credit allocation"'
+2026-06-16 12:58:37 | INFO | vector_store | Retrieved 3 chunks for query: '"MX3084 LTPC credits breakdown" or "MX3084 Learnin'
+2026-06-16 12:58:37 | INFO | hybrid_search | Semantic search returned 3 chunks
+2026-06-16 12:58:37 | INFO | hybrid_search | Keyword search returned 3 chunks
+2026-06-16 12:58:37 | INFO | hybrid_search | Hybrid search returned 3 chunks
+2026-06-16 12:58:37 | INFO | query_rewriter | Query needs rewriting: 'Sendai Framework disaster risk reduction'
+2026-06-16 12:58:38 | INFO | query_rewriter | Original: 'Sendai Framework disaster risk reduction'
+2026-06-16 12:58:38 | INFO | query_rewriter | Rewritten: '"Sendai Framework implementation in disaster risk reduction strategies and policies"'
+2026-06-16 12:58:38 | INFO | vector_store | Retrieved 3 chunks for query: '"Sendai Framework implementation in disaster risk '
+2026-06-16 12:58:38 | INFO | hybrid_search | Semantic search returned 3 chunks
+2026-06-16 12:58:38 | INFO | hybrid_search | Keyword search returned 3 chunks
+2026-06-16 12:58:38 | INFO | hybrid_search | Hybrid search returned 3 chunks
+2026-06-16 12:58:38 | INFO | query_rewriter | Query needs rewriting: 'types of natural disasters'
+2026-06-16 12:58:39 | INFO | query_rewriter | Original: 'types of natural disasters'
+2026-06-16 12:58:39 | INFO | query_rewriter | Rewritten: '"natural disasters definition and examples" or "types of natural hazards and catastrophes in environmental science"'
+2026-06-16 12:58:39 | INFO | vector_store | Retrieved 3 chunks for query: '"natural disasters definition and examples" or "ty'
+2026-06-16 12:58:39 | INFO | hybrid_search | Semantic search returned 3 chunks
+2026-06-16 12:58:39 | INFO | hybrid_search | Keyword search returned 3 chunks
+2026-06-16 12:58:39 | INFO | hybrid_search | Hybrid search returned 3 chunks

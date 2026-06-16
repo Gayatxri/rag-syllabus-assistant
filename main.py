@@ -6,20 +6,21 @@ from src.logger import get_logger
 from src.document_loader import load_all_documents
 from src.chunker import chunk_documents
 from src.embedder import load_embedding_model, embed_chunks
-from src.vector_store import (
-    get_collection, store_chunks, search_chunks
-)
+from src.vector_store import get_collection, store_chunks
 from src.hybrid_search import HybridSearcher
 from src.query_rewriter import rewrite_if_needed
+from src.reranker import rerank_chunks
+from src.generator import get_llm_client, build_prompt, generate_answer
+from src.validator import validate_question
 
 logger = get_logger("main")
 
-def main():
+def setup():
+    """Setup full pipeline"""
     logger.info("="*50)
-    logger.info("Day 12 — Hybrid Search Test")
+    logger.info("Phase 3 Complete Pipeline")
     logger.info("="*50)
 
-    # Setup
     documents = load_all_documents()
     chunks = chunk_documents(documents)
     model = load_embedding_model()
@@ -27,7 +28,6 @@ def main():
     collection = get_collection()
     store_chunks(collection, chunks, embeddings)
 
-    # Build hybrid searcher
     chunk_texts = [c.page_content for c in chunks]
     chunk_metas = [
         {
@@ -37,44 +37,56 @@ def main():
         for c in chunks
     ]
     searcher = HybridSearcher(chunk_texts, chunk_metas)
+    return model, collection, searcher
 
-    # Test queries
-    test_queries = [
-        "MX3084 LTPC credits",
-        "Sendai Framework disaster risk reduction",
-        "types of natural disasters",
+def ask(question: str, model, collection,
+        searcher) -> str:
+    """Full Phase 3 RAG pipeline"""
+
+    print(f"\n{'='*55}")
+    print(f"❓ Question: {question}")
+
+    # Step 1 — Validate
+    question = validate_question(question)
+
+    # Step 2 — Rewrite if needed
+    rewritten = rewrite_if_needed(question)
+    if rewritten != question:
+        print(f"🔄 Rewritten: {rewritten[:60]}...")
+
+    # Step 3 — Hybrid search (get top 6)
+    chunks, metas = searcher.hybrid_search(
+        model, collection, rewritten, top_k=6
+    )
+    print(f"🔍 Retrieved {len(chunks)} chunks via hybrid search")
+
+    # Step 4 — Rerank (pick best 3)
+    reranked_chunks, reranked_metas, scores = rerank_chunks(
+        question, chunks, metas
+    )
+    top_chunks = reranked_chunks[:3]
+    top_metas = reranked_metas[:3]
+    print(f"⚡ Reranked — top scores: "
+          f"{[round(s,2) for s in scores[:3]]}")
+
+    # Step 5 — Generate answer
+    llm = get_llm_client()
+    prompt = build_prompt(question, top_chunks, top_metas)
+    answer = generate_answer(llm, prompt)
+
+    print(f"\n✅ Answer: {answer}")
+    return answer
+
+def main():
+    model, collection, searcher = setup()
+
+    questions = [
+        "What are the types of disasters?",
+        "What is the Sendai Framework?",
     ]
 
-    print("\n" + "="*55)
-    print("🔍 Hybrid Search Test")
-    print("="*55)
-
-    for query in test_queries:
-        print(f"\n❓ Query: '{query}'")
-
-        # Rewrite if needed
-        rewritten = rewrite_if_needed(query)
-        if rewritten != query:
-            print(f"🔄 Rewritten: '{rewritten[:60]}...'")
-
-        # Semantic only
-        sem_chunks, sem_metas = search_chunks(
-            collection, model, rewritten, 3
-        )
-        print(f"\n📊 Semantic search top result:")
-        print(f"   Source: {sem_metas[0]['source']}, "
-              f"Page: {sem_metas[0]['page']}")
-        print(f"   Preview: {sem_chunks[0][:100]}...")
-
-        # Hybrid search
-        hyb_chunks, hyb_metas = searcher.hybrid_search(
-            model, collection, rewritten
-        )
-        print(f"\n🔀 Hybrid search top result:")
-        print(f"   Source: {hyb_metas[0]['source']}, "
-              f"Page: {hyb_metas[0]['page']}")
-        print(f"   Preview: {hyb_chunks[0][:100]}...")
-        print("-"*55)
+    for question in questions:
+        ask(question, model, collection, searcher)
 
 if __name__ == "__main__":
     main()

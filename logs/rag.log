@@ -186,3 +186,49 @@
 2026-06-16 12:58:39 | INFO | hybrid_search | Semantic search returned 3 chunks
 2026-06-16 12:58:39 | INFO | hybrid_search | Keyword search returned 3 chunks
 2026-06-16 12:58:39 | INFO | hybrid_search | Hybrid search returned 3 chunks
+2026-06-16 13:02:48 | INFO | main | ==================================================
+2026-06-16 13:02:48 | INFO | main | Phase 3 Complete Pipeline
+2026-06-16 13:02:48 | INFO | main | ==================================================
+2026-06-16 13:02:48 | INFO | document_loader | Found 2 PDF(s) in ./data/documents
+2026-06-16 13:02:48 | INFO | validator | Document validated: ./data/documents\syllabus.pdf (3742.9 KB)
+2026-06-16 13:03:02 | INFO | document_loader | Loaded 'syllabus.pdf' — 191 pages
+2026-06-16 13:03:02 | INFO | validator | Document validated: ./data/documents\unit-1-notes-ai.pdf (4138.8 KB)
+2026-06-16 13:03:03 | INFO | document_loader | Loaded 'unit-1-notes-ai.pdf' — 32 pages
+2026-06-16 13:03:03 | INFO | document_loader | Total loaded: 223 pages from 2 documents
+2026-06-16 13:03:03 | INFO | chunker | Created 801 chunks from 223 pages
+2026-06-16 13:03:04 | INFO | embedder | Embedding model loaded: all-MiniLM-L6-v2
+2026-06-16 13:03:21 | INFO | embedder | Generated 801 embeddings of dimension 384
+2026-06-16 13:03:22 | INFO | vector_store | Connected to ChromaDB: 801 chunks stored
+2026-06-16 13:03:22 | INFO | vector_store | Cleared 801 existing chunks
+2026-06-16 13:03:23 | INFO | vector_store | Stored 801 chunks in ChromaDB
+2026-06-16 13:03:23 | INFO | hybrid_search | Hybrid searcher initialized with 801 chunks
+2026-06-16 13:03:23 | INFO | validator | Question validated: 'What are the types of disasters?'
+2026-06-16 13:03:23 | INFO | query_rewriter | Query is good, no rewrite needed
+2026-06-16 13:03:23 | INFO | hybrid_search | Semantic search returned 6 chunks
+2026-06-16 13:03:23 | INFO | hybrid_search | Keyword search returned 6 chunks
+2026-06-16 13:03:23 | INFO | hybrid_search | Hybrid search returned 6 chunks
+2026-06-16 13:03:23 | INFO | reranker | Reranking 6 chunks for question: 'What are the types of disasters?'
+2026-06-16 13:03:25 | INFO | reranker | Chunk 1 score: 0.80 (Page 6)
+2026-06-16 13:03:26 | INFO | reranker | Chunk 2 score: 0.00 (Page 18)
+2026-06-16 13:03:26 | INFO | reranker | Chunk 3 score: 0.80 (Page 31)
+2026-06-16 13:03:26 | INFO | reranker | Chunk 4 score: 0.20 (Page 183)
+2026-06-16 13:03:26 | INFO | reranker | Chunk 5 score: 0.20 (Page 2)
+2026-06-16 13:03:27 | INFO | reranker | Chunk 6 score: 0.00 (Page 17)
+2026-06-16 13:03:27 | INFO | reranker | Reranking complete. Top score: 0.80
+2026-06-16 13:03:27 | INFO | generator | LLM client ready: llama-3.3-70b-versatile
+2026-06-16 13:03:28 | INFO | generator | Answer generated successfully
+2026-06-16 13:03:28 | INFO | validator | Question validated: 'What is the Sendai Framework?'
+2026-06-16 13:03:28 | INFO | query_rewriter | Query is good, no rewrite needed
+2026-06-16 13:03:28 | INFO | hybrid_search | Semantic search returned 6 chunks
+2026-06-16 13:03:28 | INFO | hybrid_search | Keyword search returned 6 chunks
+2026-06-16 13:03:28 | INFO | hybrid_search | Hybrid search returned 6 chunks
+2026-06-16 13:03:28 | INFO | reranker | Reranking 6 chunks for question: 'What is the Sendai Framework?'
+2026-06-16 13:03:29 | INFO | reranker | Chunk 1 score: 0.80 (Page 129)
+2026-06-16 13:03:30 | INFO | reranker | Chunk 2 score: 0.00 (Page 177)
+2026-06-16 13:03:31 | INFO | reranker | Chunk 3 score: 0.00 (Page 11)
+2026-06-16 13:03:32 | INFO | reranker | Chunk 4 score: 0.00 (Page 122)
+2026-06-16 13:03:32 | INFO | reranker | Chunk 5 score: 0.00 (Page 15)
+2026-06-16 13:03:33 | INFO | reranker | Chunk 6 score: 0.00 (Page 16)
+2026-06-16 13:03:33 | INFO | reranker | Reranking complete. Top score: 0.80
+2026-06-16 13:03:33 | INFO | generator | LLM client ready: llama-3.3-70b-versatile
+2026-06-16 13:03:34 | INFO | generator | Answer generated successfully

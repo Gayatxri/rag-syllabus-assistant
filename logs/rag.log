@@ -330,3 +330,116 @@
 2026-06-16 13:17:14 | INFO | generator | Answer generated successfully
 2026-06-16 13:17:20 | INFO | evaluator | Evaluation scores: {'faithfulness': 1.0, 'answer_relevance': 1.0, 'context_precision': 1.0, 'overall': 1.0}
 2026-06-16 13:17:21 | INFO | main | Evaluation complete. Overall score: 0.97
+2026-06-18 13:18:54 | INFO | app | Initializing RAG System Backend for Streamlit...
+2026-06-18 13:18:54 | INFO | app | Initializing RAG System Backend for Streamlit...
+2026-06-18 13:18:54 | INFO | document_loader | Found 2 PDF(s) in ./data/documents
+2026-06-18 13:18:54 | INFO | validator | Document validated: ./data/documents\syllabus.pdf (3742.9 KB)
+2026-06-18 13:19:10 | INFO | document_loader | Loaded 'syllabus.pdf' — 191 pages
+2026-06-18 13:19:10 | INFO | validator | Document validated: ./data/documents\unit-1-notes-ai.pdf (4138.8 KB)
+2026-06-18 13:19:11 | INFO | document_loader | Loaded 'unit-1-notes-ai.pdf' — 32 pages
+2026-06-18 13:19:11 | INFO | document_loader | Total loaded: 223 pages from 2 documents
+2026-06-18 13:19:11 | INFO | chunker | Created 801 chunks from 223 pages
+2026-06-18 13:19:12 | INFO | embedder | Embedding model loaded: all-MiniLM-L6-v2
+2026-06-18 13:19:27 | INFO | embedder | Generated 801 embeddings of dimension 384
+2026-06-18 13:19:27 | INFO | vector_store | Connected to ChromaDB: 801 chunks stored
+2026-06-18 13:19:28 | INFO | vector_store | Cleared 801 existing chunks
+2026-06-18 13:19:29 | INFO | vector_store | Stored 801 chunks in ChromaDB
+2026-06-18 13:19:29 | INFO | hybrid_search | Hybrid searcher initialized with 801 chunks
+2026-06-18 13:20:14 | INFO | validator | Question validated: 'what vis disaster'
+2026-06-18 13:20:14 | INFO | query_rewriter | Query needs rewriting: 'what vis disaster'
+2026-06-18 13:20:17 | INFO | query_rewriter | Original: 'what vis disaster'
+2026-06-18 13:20:17 | INFO | query_rewriter | Rewritten: '"visual impairment as a disaster" or "disaster management for people with visual disabilities"'
+2026-06-18 13:20:17 | INFO | hybrid_search | Semantic search returned 6 chunks
+2026-06-18 13:20:17 | INFO | hybrid_search | Keyword search returned 6 chunks
+2026-06-18 13:20:17 | INFO | hybrid_search | Hybrid search returned 6 chunks
+2026-06-18 13:20:17 | INFO | reranker | Reranking 6 chunks for question: 'what vis disaster'
+2026-06-18 13:20:21 | INFO | reranker | Chunk 1 score: 0.70 (Page 40)
+2026-06-18 13:20:21 | INFO | reranker | Chunk 2 score: 0.00 (Page 12)
+2026-06-18 13:20:22 | INFO | reranker | Chunk 3 score: 0.80 (Page 176)
+2026-06-18 13:20:22 | INFO | reranker | Chunk 4 score: 0.20 (Page 13)
+2026-06-18 13:20:22 | INFO | reranker | Chunk 5 score: 0.80 (Page 40)
+2026-06-18 13:20:22 | INFO | reranker | Chunk 6 score: 0.00 (Page 35)
+2026-06-18 13:20:22 | INFO | reranker | Reranking complete. Top score: 0.80
+2026-06-18 13:20:23 | INFO | generator | LLM client ready: llama-3.3-70b-versatile
+2026-06-18 13:20:24 | INFO | generator | Answer generated successfully
+2026-06-18 13:20:58 | INFO | validator | Question validated: 'important qn in  disastver'
+2026-06-18 13:20:58 | INFO | query_rewriter | Query needs rewriting: 'important qn in  disastver'
+2026-06-18 13:21:01 | INFO | query_rewriter | Original: 'important qn in  disastver'
+2026-06-18 13:21:01 | INFO | query_rewriter | Rewritten: '"key concepts in disaster management"'
+2026-06-18 13:21:01 | INFO | hybrid_search | Semantic search returned 6 chunks
+2026-06-18 13:21:01 | INFO | hybrid_search | Keyword search returned 6 chunks
+2026-06-18 13:21:01 | INFO | hybrid_search | Hybrid search returned 6 chunks
+2026-06-18 13:21:01 | INFO | reranker | Reranking 6 chunks for question: 'important qn in  disastver'
+2026-06-18 13:21:03 | INFO | reranker | Chunk 1 score: 0.70 (Page 178)
+2026-06-18 13:21:04 | INFO | reranker | Chunk 2 score: 0.80 (Page 173)
+2026-06-18 13:21:05 | INFO | reranker | Chunk 3 score: 0.00 (Page 137)
+2026-06-18 13:21:06 | INFO | reranker | Chunk 4 score: 0.60 (Page 172)
+2026-06-18 13:21:07 | INFO | reranker | Chunk 5 score: 0.80 (Page 173)
+2026-06-18 13:21:08 | INFO | reranker | Chunk 6 score: 0.50 (Page 172)
+2026-06-18 13:21:08 | INFO | reranker | Reranking complete. Top score: 0.80
+2026-06-18 13:21:09 | INFO | generator | LLM client ready: llama-3.3-70b-versatile
+2026-06-18 13:21:11 | INFO | generator | Answer generated successfully
+2026-06-18 13:21:29 | INFO | validator | Question validated: 'what is your name'
+2026-06-18 13:21:29 | INFO | query_rewriter | Query needs rewriting: 'what is your name'
+2026-06-18 13:21:30 | INFO | query_rewriter | Original: 'what is your name'
+2026-06-18 13:21:30 | INFO | query_rewriter | Rewritten: '"University staff directory" or "instructor contact information"'
+2026-06-18 13:21:30 | INFO | hybrid_search | Semantic search returned 6 chunks
+2026-06-18 13:21:30 | INFO | hybrid_search | Keyword search returned 6 chunks
+2026-06-18 13:21:30 | INFO | hybrid_search | Hybrid search returned 6 chunks
+2026-06-18 13:21:31 | INFO | reranker | Reranking 6 chunks for question: 'what is your name'
+2026-06-18 13:21:31 | INFO | reranker | Chunk 1 score: 0.00 (Page 98)
+2026-06-18 13:21:31 | INFO | reranker | Chunk 2 score: 0.00 (Page 152)
+2026-06-18 13:21:32 | INFO | reranker | Chunk 3 score: 0.00 (Page 13)
+2026-06-18 13:21:32 | INFO | reranker | Chunk 4 score: 0.00 (Page 150)
+2026-06-18 13:21:32 | INFO | reranker | Chunk 5 score: 0.00 (Page 86)
+2026-06-18 13:21:32 | INFO | reranker | Chunk 6 score: 0.00 (Page 169)
+2026-06-18 13:21:32 | INFO | reranker | Reranking complete. Top score: 0.00
+2026-06-18 13:21:33 | INFO | generator | LLM client ready: llama-3.3-70b-versatile
+2026-06-18 13:21:33 | INFO | generator | Answer generated successfully
+2026-06-18 13:21:51 | INFO | validator | Question validated: 'can you vexplain science'
+2026-06-18 13:21:51 | INFO | query_rewriter | Query needs rewriting: 'can you vexplain science'
+2026-06-18 13:21:53 | INFO | query_rewriter | Original: 'can you vexplain science'
+2026-06-18 13:21:53 | INFO | query_rewriter | Rewritten: '"syllabus contents for science courses"'
+2026-06-18 13:21:53 | INFO | hybrid_search | Semantic search returned 6 chunks
+2026-06-18 13:21:53 | INFO | hybrid_search | Keyword search returned 6 chunks
+2026-06-18 13:21:53 | INFO | hybrid_search | Hybrid search returned 6 chunks
+2026-06-18 13:21:54 | INFO | reranker | Reranking 6 chunks for question: 'can you vexplain science'
+2026-06-18 13:21:56 | INFO | reranker | Chunk 1 score: 0.20 (Page 3)
+2026-06-18 13:21:57 | INFO | reranker | Chunk 2 score: 0.00 (Page 163)
+2026-06-18 13:21:58 | INFO | reranker | Chunk 3 score: 0.00 (Page 13)
+2026-06-18 13:21:58 | INFO | reranker | Chunk 4 score: 0.20 (Page 4)
+2026-06-18 13:21:59 | INFO | reranker | Chunk 5 score: 0.00 (Page 96)
+2026-06-18 13:21:59 | INFO | reranker | Chunk 6 score: 0.00 (Page 28)
+2026-06-18 13:21:59 | INFO | reranker | Reranking complete. Top score: 0.20
+2026-06-18 13:22:00 | INFO | generator | LLM client ready: llama-3.3-70b-versatile
+2026-06-18 13:22:02 | INFO | generator | Answer generated successfully
+2026-06-18 13:26:13 | INFO | document_loader | Found 2 PDF(s) in ./data/documents
+2026-06-18 13:26:13 | INFO | validator | Document validated: ./data/documents\syllabus.pdf (3742.9 KB)
+2026-06-18 13:26:30 | INFO | document_loader | Loaded 'syllabus.pdf' — 191 pages
+2026-06-18 13:26:30 | INFO | validator | Document validated: ./data/documents\unit-1-notes-ai.pdf (4138.8 KB)
+2026-06-18 13:26:31 | INFO | document_loader | Loaded 'unit-1-notes-ai.pdf' — 32 pages
+2026-06-18 13:26:31 | INFO | document_loader | Total loaded: 223 pages from 2 documents
+2026-06-18 13:26:31 | INFO | chunker | Created 801 chunks from 223 pages
+2026-06-18 13:26:31 | INFO | embedder | Embedding model loaded: all-MiniLM-L6-v2
+2026-06-18 13:26:45 | INFO | embedder | Generated 801 embeddings of dimension 384
+2026-06-18 13:26:45 | INFO | vector_store | Connected to ChromaDB: 801 chunks stored
+2026-06-18 13:26:45 | INFO | vector_store | Cleared 801 existing chunks
+2026-06-18 13:26:46 | INFO | vector_store | Stored 801 chunks in ChromaDB
+2026-06-18 13:26:46 | INFO | hybrid_search | Hybrid searcher initialized with 801 chunks
+2026-06-18 13:27:16 | INFO | validator | Question validated: 'what is disaster'
+2026-06-18 13:27:16 | INFO | query_rewriter | Query needs rewriting: 'what is disaster'
+2026-06-18 13:27:17 | INFO | query_rewriter | Original: 'what is disaster'
+2026-06-18 13:27:17 | INFO | query_rewriter | Rewritten: '"definition of disaster in the context of emergency management"'
+2026-06-18 13:27:17 | INFO | hybrid_search | Semantic search returned 6 chunks
+2026-06-18 13:27:17 | INFO | hybrid_search | Keyword search returned 6 chunks
+2026-06-18 13:27:17 | INFO | hybrid_search | Hybrid search returned 6 chunks
+2026-06-18 13:27:17 | INFO | reranker | Reranking 6 chunks for question: 'what is disaster'
+2026-06-18 13:27:18 | INFO | reranker | Chunk 1 score: 0.20 (Page 71)
+2026-06-18 13:27:18 | INFO | reranker | Chunk 2 score: 0.20 (Page 134)
+2026-06-18 13:27:18 | INFO | reranker | Chunk 3 score: 0.20 (Page 71)
+2026-06-18 13:27:18 | INFO | reranker | Chunk 4 score: 0.90 (Page 170)
+2026-06-18 13:27:19 | INFO | reranker | Chunk 5 score: 0.20 (Page 160)
+2026-06-18 13:27:20 | INFO | reranker | Chunk 6 score: 1.00 (Page 2)
+2026-06-18 13:27:20 | INFO | reranker | Reranking complete. Top score: 1.00
+2026-06-18 13:27:20 | INFO | generator | LLM client ready: llama-3.3-70b-versatile
+2026-06-18 13:27:21 | INFO | generator | Answer generated successfully
